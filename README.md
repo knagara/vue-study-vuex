@@ -1,4 +1,4 @@
-# vue-study-router
+# vue-study-vuex
 
 ## Project setup
 ```
