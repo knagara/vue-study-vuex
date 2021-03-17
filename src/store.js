@@ -14,6 +14,9 @@ export default new Vuex.Store({
     mutations: {
         increment(state, addValue) {
             state.count += addValue;
+        },
+        decrement(state, value) {
+            state.count -= value;
         }
     }
 })
