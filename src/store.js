@@ -18,5 +18,14 @@ export default new Vuex.Store({
         decrement(state, value) {
             state.count -= value;
         }
+    },
+    // 非同期処理を書ける
+    actions: {
+        incrementAction(context, value){
+            context.commit('increment', value);
+        },
+        decrementAction(context, value){
+            context.commit('decrement', value);
+        }
     }
 })
