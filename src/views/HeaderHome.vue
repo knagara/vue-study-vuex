@@ -12,6 +12,12 @@
 import { mapMutations } from 'vuex';
 export default {
   methods:{
+    // increment() {
+    //   this.$store.commit("increment", 1);
+    // },
+    // decrement() {
+    //   this.$store.commit("decrement", 1);
+    // },
     ...mapMutations(["increment", "decrement"])
   }
 }
