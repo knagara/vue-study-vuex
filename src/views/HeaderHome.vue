@@ -23,8 +23,8 @@ export default {
     // actionIncrement(){
     //   this.$store.dispatch('increment', 1);
     // },
-    ...mapActions(["incrementAction", "decrementAction"]),
-    ...mapMutations(["increment", "decrement"])
+    ...mapActions("count", ["incrementAction", "decrementAction"]),
+    ...mapMutations("count", ["increment", "decrement"])
   }
 }
 </script>

@@ -7,6 +7,8 @@
         <p>{{ tripleCount }}</p>
         <input type="text" v-model="message">
         <p>{{ message }}</p>
+
+        <p>{{doubleCountGetter}}</p>
     </div>
 </template>
 
@@ -16,6 +18,9 @@ export default {
     computed: {
         count(){
             return this.$store.state.count;
+        },
+        doubleCountGetter() {
+            return this.$store.getters["count/doubleCount"]
         },
         // message(){
         //     return this.$store.getters.message;
@@ -28,7 +33,7 @@ export default {
                 this.$store.dispatch('updateMessage', value);
             }
         },
-        ...mapGetters(["doubleCount", "tripleCount"]),
+        ...mapGetters("count", ["doubleCount", "tripleCount"]),
     },
     methods:{
         toUsers(){
